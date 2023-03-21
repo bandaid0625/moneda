@@ -1,0 +1,59 @@
+.simple-calendar {
+  
+  .day {}
+
+  // body {
+  //   font-family: 'arial',sans-serif;
+  //   }
+    
+
+  .calendar-heading a {
+    text-decoration: none;
+    
+  }
+
+  .calendar-heading {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-family: "MS Gothic", Helvetica, sans-serif;
+  }
+  .prev-month a {
+    background-color: white;
+  }
+  tr th {
+    text-align: center;
+    font-family: "MS Gothic", Helvetica, sans-serif;
+  }
+  .simple-calendar th {
+    text-align: center;
+  }
+
+  .wday-0 {
+    color: red;
+  }
+  .wday-1 {}
+  .wday-2 {}
+  .wday-3 {}
+  .wday-4 {}
+  .wday-5 {}
+  .wday-6 {
+    color: blue;
+  }
+  .prev-month {
+    background-color: lightgrey;
+  }
+  .today {}
+  .past {}
+  .future {}
+
+  .start-date {}
+
+  .prev-month {
+    background-color: red;
+  }
+  .next-month { }
+  .current-month {}
+
+  .has-events {}
+}
