@@ -13,14 +13,21 @@
 ActiveRecord::Schema.define(version: 2023_03_19_095000) do
 
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "start_time", null: false
+    t.integer "expense_price", null: false
+    t.text "memo"
+    t.integer "genre"
+    t.integer "category"
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "nickname", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
-    t.string "nickname", null: false
     t.integer "age_id", null: false
     t.integer "family_id", null: false
     t.string "reset_password_token"
@@ -32,4 +39,5 @@ ActiveRecord::Schema.define(version: 2023_03_19_095000) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "posts", "users"
 end
