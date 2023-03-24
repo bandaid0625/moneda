@@ -14,6 +14,8 @@ module Moneda
     config.time_zone = 'Tokyo'
     config.i18n.available_locales = :ja
     config.i18n.default_locale = :ja
+    config.active_storage.variant_processor = :mini_magick
+  
 
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.yml').to_s]
 
