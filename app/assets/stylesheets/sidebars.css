@@ -1,11 +1,21 @@
-body {
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
+body { min-height: 100vh; }
+
+img.rounded-circle {
+  margin-right: 10px;
 }
 
-
 html {
-  height: -webkit-fill-available;
+  height: 100%;
+  /* height: -webkit-fill-available; */
+}
+
+a#dropdownUser1 {
+  font-size: 20px;
+}
+
+.fs-4 {
+  font-size: 20px;
+  font-family: impact;
 }
 
 main {
@@ -42,6 +52,10 @@ main {
 
 .nav-flush .nav-link {
   border-radius: 0;
+}
+
+a.nav-link:hover {
+  background-color: #0000CC;
 }
 
 .btn-toggle {

@@ -2,10 +2,55 @@
   <div class="side_bar">
     <%= render "side_bar" %>
   </div>
-  <div class="calendar">
-    <%= month_calendar do |date| %>
-      <%= date.day %>
-    <% end %>
+  <div class="main-right">
+  <%# ヘッダー %>
+    <header>
+      <%= render "header" %>
+    </header>
+  <%# メイン %>
+    <div class="main-middle">
+      <div class="left">
+        <div class="index">Calendar</div>
+        <div class="calendar-container">
+          <%= month_calendar do |date| %>
+            <%= date.day %>
+          <% end %>
+        </div>
+      </div>
+      <div class="table-right">
+        <div class="index">Balance</div>
+        <div class="sum-now-container">
+          <div class="sum-now">
+            <ul class="months">
+              <li class="month">
+                <div class="letter">収入</div>
+                <h5>200000円</h5>
+              </li>
+              <li class="month">
+                <div class="letter">支出</div>
+                <h5>100000円</h5>
+                </li>
+              <li class="month">
+                <div class="letter">合計</div>
+                <h5>100000円</h5>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="index">Index</div>
+        <div class="index-container">
+          <div class="day-each">
+            <div class="date">○月○日(○)</div>
+            <div class="sum-day">1,000円</div>
+          </div>
+          <div class="usage">
+            <div class="icon"></div>
+            <div class="genre"></div>
+            <div class="price"></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
